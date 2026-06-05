@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partha Protim Datta - MERN Stack Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+  <!-- PARTICLES -->
+  <canvas id="particles"></canvas>
+
+  <!-- NAV -->
+  <nav>
+    <span class="nav-logo">Partha Protim Datta</span>
+    <div class="nav-right">
+  <div class="nav-links" id="navLinks">
+    <a href="#about">About</a>
+    <a href="#projects">Work</a>
+    <a href="#process">Process</a>
+    <a href="#contact">Contact</a>
+  </div>
+<div class="toggle" id="toggle"></div>
+  <div class="hamburger" id="hamburger">
+    ☰
+    
+  </div>
+
+  
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-gradient"></div>
+    <div class="hero-orb hero-orb-1" data-speed="0.04" data-mouse="0.025"></div>
+    <div class="hero-orb hero-orb-2" data-speed="0.07" data-mouse="0.018"></div>
+    <div class="hero-orb hero-orb-3" data-speed="0.10" data-mouse="0.012"></div>
+
+    <div class="hero-layout">
+
+      <!-- LEFT: Text content -->
+      <div class="hero-content">
+
+        <!-- Greeting -->
+        <div class="hero-greeting">
+          <div class="hero-greeting-line"></div>
+          <span class="hero-greeting-text">Hello there</span>
+          <span class="hero-greeting-wave">👋</span>
+        </div>
+
+        <!-- Name badge -->
+        <div class="hero-name-badge">
+          <div class="hero-name-avatar">P</div>
+          <div style="display:flex;flex-direction:column;gap:1px;">
+            <span>MERN Stack Developer</span>
+            <strong>Partha Protim Datta</strong>
+          </div>
+        </div>
+
+        <!-- Role tag -->
+        <div class="hero-role-tag">
+          <div class="hero-role-dot"></div>
+
+          <span class="hero-role-text">Available for internships &amp; collaborations &nbsp;·&nbsp; <span id="typewriter"></span><span class="type-cursor">|</span></span>
+        </div>
+  
+        <h1>
+          Hi, I'm <em class="shimmer">Partha</em> —<br>
+          a <em>MERN Stack Developer</em><br>
+          building <em class="shimmer">fast, responsive</em><br>
+          web experiences
+        </h1>
+       
+        <!-- Stats row -->
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-num">6+</span>
+            <span class="hero-stat-label">Months Coding</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">6+</span>
+            <span class="hero-stat-label">Projects Built</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat hero-stat--skills" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+            <span class="hero-stat-num">10+</span>
+            <span class="hero-stat-label">Skills Mastered</span>
+            <div class="hero-skills-popup">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              <span>React</span><span>Node.js</span><span>MongoDB</span>
+              <span>Express</span><span>API Integration</span><span>Debugging</span>
+              <span>Problem Solving</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:16px;margin-top:36px;flex-wrap:wrap;">
+          <a href="#projects" class="btn-primary" id="btnViewWork" onclick="heroNavTo(event,'projects')">View My Work →</a>
+          <a href="mailto:protim939@gmail.com" class="btn-secondary" id="btnGetInTouch">Get in Touch ✉</a>
+        </div>
+      </div>
+
+      <!-- RIGHT: 3D Visual -->
+      <div class="hero-3d-side">
+        <canvas id="hero3d"></canvas>
+        <div class="float-label fl-1">
+          <div class="fl-dot" style="background:#d4aaff;box-shadow:0 0 6px #d4aaff;"></div>
+          MERN Stack
+        </div>
+        <div class="float-label fl-2">
+          <div class="fl-dot" style="background:#ffb3d9;box-shadow:0 0 6px #ffb3d9;"></div>
+          Full-stack Dev
+        </div>
+        <div class="float-label fl-3">
+          <div class="fl-dot" style="background:#a78bfa;box-shadow:0 0 6px #a78bfa;"></div>
+          6+ Projects
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hero-scroll-line"></div>
+    <div class="scroll-hint">Scroll ↓</div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-left reveal">
+
+  <div class="profile-card">
+    <img src="partha.jpg" alt="Partha Protim Datta" class="profile-img">
+
+    <div class="profile-info">
+      <h3>Partha Protim Datta</h3>
+      <p>MERN Stack Developer</p>
+    </div>
+  </div>
+      <div class="edu-block">
+    <h4>Diploma in Computer Science</h4>
+    <p>Cox's Bazar Polytechnic Institute</p>
+</div>
+</div>
+    <div class="about-right reveal">
+      <div class="about-content">
+  <p class="section-label">ABOUT ME</p>
+
+  <h2 class="section-title">
+    Hi, I'm <span class="gradient-text">Partha</span>
+  </h2>
+
+  <p class="about-description">
+    I am a passionate MERN Stack Developer and Computer Science student
+    from Bangladesh. I enjoy building modern websites, responsive web
+    applications, and user-friendly digital experiences.
+
+    My focus is creating clean, scalable, and efficient solutions while
+    continuously learning new technologies and improving my development
+    skills.
+  </p>
+</div>
+      <p class="section-label">Skills & Tools</p>
+      <div class="skills-grid">
+        <div class="skill-tag">HTML</div>
+        <div class="skill-tag">CSS</div>
+        <div class="skill-tag">JavaScript</div>
+        <div class="skill-tag">React</div>
+        <div class="skill-tag">Node.js</div>
+        <div class="skill-tag">Git</div>
+        <div class="skill-tag">REST APIs</div>
+        <div class="skill-tag">Responsive Web</div>
+        <div class="skill-tag">Debugging</div>
+        <div class="skill-tag">Problem Solving</div>
+      </div>
+      <div class="tools-row" style="margin-top:28px;">
+        <span class="tool-pill">VS Code</span>
+        <span class="tool-pill">GitHub</span>
+        <span class="tool-pill">React</span>
+        <span class="tool-pill">Node.js</span>
+        <span class="tool-pill">MongoDB</span>
+        <span class="tool-pill">Express</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <p class="section-label reveal">Featured Work</p>
+    <h2 class="section-title reveal">Selected <em class="shimmer">Projects</em></h2>
+    <div class="projects-grid">
+
+      <div class="project-card reveal" onclick="openModal('portfolio')">
+        <div class="card-visual v1">💻</div>
+        <div class="card-body">
+          <div class="card-number">01 — Portfolio</div>
+          <h3>Personal Portfolio</h3>
+          <p>A responsive developer portfolio built to showcase projects, skills, and contact details across devices.</p>
+          <div class="card-tags">
+            <span class="card-tag">HTML</span>
+            <span class="card-tag">CSS</span>
+            <span class="card-tag">JavaScript</span>
+          </div>
+          <div class="view-project-btn">View Case Study →</div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" onclick="openModal('ecommerce')">
+        <div class="card-visual v2">🛒</div>
+        <div class="card-body">
+          <div class="card-number">02 — E-commerce</div>
+          <h3>E-commerce Website</h3>
+          <p>A full-stack e-commerce platform with product catalog, shopping cart, payment integration, and user authentication.</p>
+          <div class="card-tags">
+            <span class="card-tag">React</span>
+            <span class="card-tag">Node.js</span>
+            <span class="card-tag">MongoDB</span>
+          </div>
+          <div class="view-project-btn">View Case Study →</div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" onclick="openModal('landing')">
+        <div class="card-visual v3">🛍️</div>
+        <div class="card-body">
+          <div class="card-number">03 — Landing Page</div>
+          <h3>Product Landing</h3>
+          <p>A conversion-focused landing page built with modern layout patterns, CTA sections, and fast load performance.</p>
+          <div class="card-tags">
+            <span class="card-tag">HTML</span>
+            <span class="card-tag">CSS</span>
+            <span class="card-tag">Accessibility</span>
+          </div>
+          <div class="view-project-btn">View Case Study →</div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" onclick="openModal('restaurant')">
+        <div class="card-visual v4">🍽️</div>
+        <div class="card-body">
+          <div class="card-number">04 — Website</div>
+          <h3>Restaurant Site</h3>
+          <p>A mobile-first restaurant website with menu sections, reservation UI, and polished interactions for diners.</p>
+          <div class="card-tags">
+            <span class="card-tag">Responsive</span>
+            <span class="card-tag">JavaScript</span>
+            <span class="card-tag">Web Design</span>
+          </div>
+          <div class="view-project-btn">View Case Study →</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <p class="section-label reveal">How I Work</p>
+    <h2 class="section-title reveal">Development <em class="shimmer">Process</em></h2>
+    <div class="process-steps">
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <h4>Plan</h4>
+        <p>Define requirements, map user flows, and choose the right tools for the project.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">02</div>
+        <h4>Design</h4>
+        <p>Create clean layouts, responsive interfaces, and component structure for development.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">03</div>
+        <h4>Develop</h4>
+        <p>Write maintainable HTML, CSS, and JavaScript code with focus on performance.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">04</div>
+        <h4>Test</h4>
+        <p>Validate across devices, fix bugs, and ensure a smooth user experience.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">05</div>
+        <h4>Launch</h4>
+        <p>Deploy polished work and make sure the final product is stable and easy to use.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY ME -->
+  <section id="why">
+    <div class="reveal">
+      <p class="section-label">Why Work With Me</p>
+      <h2 class="section-title">Passion Meets<br><em>Precision</em></h2>
+      <ul class="why-list">
+        <li>Strong foundation in Computer Science</li>
+        <li>Clean, responsive web development</li>
+        <li>Fast learner and problem solver</li>
+        <li>Reliable communication and teamwork</li>
+        <li>Focus on quality and performance</li>
+        <li>Always ready to learn new tools</li>
+      </ul>
+    </div>
+    <div class="why-right reveal">
+      <h3>Let's Build Something <em>Solid</em></h3>
+      <p>I bring a mix of coding skills, technical logic, and user-focused thinking to every project. From websites to web apps, I create digital solutions that look good and work well.</p>
+      <a href="#contact" class="btn-primary">Get in Touch →</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-gradient"></div>
+    <div class="contact-inner">
+      <p class="section-label reveal">Contact</p>
+      <h2 class="reveal">Let's Work<br><em>Together</em></h2>
+      <p class="reveal">Have a project in mind? I'd love to hear about it. Reach out via email, call, or visit my GitHub.</p>
+      <div class="contact-links reveal">
+        <a href="mailto:protim939@gmail.com" class="contact-email-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+          protim939@gmail.com
+        </a>
+        <a href="tel:+880-1906895162" class="contact-email-btn" style="background:rgba(255,179,217,0.1);border-color:rgba(255,179,217,0.22);color:var(--pink);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +880-1906895162
+        </a>
+        <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="linkedin-btn" title="Visit my GitHub">
+          <div class="linkedin-btn-icon" style="background:#333;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </div>
+          <div class="linkedin-btn-text">
+            <span>Visit my GitHub</span>
+            <strong>protimdatta</strong>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>© 2026 Partha Protim Datta</span>
+    <span>Web Developer · Cox's Bazar, Bangladesh · 01906895162</span>
+  </footer>
+
+  <!-- PROJECT MODAL -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModalOnBg(event)">
+    <div class="modal" id="modal">
+      <div class="modal-header" id="modalHeader">
+        <span class="modal-badge" id="modalBadge"></span>
+        <span class="modal-emoji" id="modalEmoji"></span>
+        <button class="modal-close" onclick="closeModal()">✕</button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modalTitle"></h2>
+        <div class="modal-role" id="modalRole"></div>
+        <div id="modalContent"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="Index.js"></script>
+</body>
+</html>
